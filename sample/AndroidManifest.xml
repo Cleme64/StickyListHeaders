@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="se.emilsjolander.stickylistheaders"
+    package="se.emilsjolander.stickylistheaderssample"
     android:versionCode="2"
     android:versionName="2.0">
 
@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
         <activity
-            android:name="se.emilsjolander.stickylistheaders.TestActivity"
+            android:name="se.emilsjolander.stickylistheaderssample.TestActivity"
             android:configChanges="orientation"
             android:label="@string/app_name">
             <intent-filter>

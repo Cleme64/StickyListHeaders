@@ -1,4 +1,4 @@
-package se.emilsjolander.stickylistheaders;
+package se.emilsjolander.stickylistheaderssample;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
+import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 /**
  * @author Emil Sjölander

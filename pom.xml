@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>se.emilsjolander</groupId>
+    <artifactId>stickylistheaders-parent</artifactId>
+    <version>2.1</version>
+    <packaging>pom</packaging>
+    <name>StikcyListHeaders Parent</name>
+    <description>StikcyListHeaders Parent</description>
+
+    <modules>
+        <module>library</module>
+        <module>sample</module>
+    </modules>
+
+    <properties>
+        <jdk.version>1.6</jdk.version>
+        <sdk.platform>19</sdk.platform>
+        <android-maven-plugin.version>3.8.2-SNAPSHOT</android-maven-plugin.version>
+        <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+
+        <android.version>4.4_r1</android.version>
+        <compatibility.version>19.0.0</compatibility.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>local-repo</id>
+            <url>${env.HOME}/.m2/repository</url>
+        </repository>
+        <repository>
+            <id>web-repo</id>
+            <url>http://maven.clementbouly.com</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>android</groupId>
+            <artifactId>android</artifactId>
+            <version>${android.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>android.support</groupId>
+            <artifactId>compatibility-v4</artifactId>
+            <version>${compatibility.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
